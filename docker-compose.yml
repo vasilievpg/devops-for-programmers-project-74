@@ -7,12 +7,12 @@ version: "3.1"
 services:
 
   app: # Имя сервиса
+    image: vasilevpg/devops-for-programmers-project-74
     build:
       # Контекст для сборки образа,
       # в данном случае, текущая директория
       context: .
       # Имя докерфайла из которого будет собран образ
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.production
     container_name: app
     command: npm test
-
