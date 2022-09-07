@@ -1,0 +1,18 @@
+# Версия схемы, которую мы используем.
+# Зависит от установленной версии docker
+# https://docs.docker.com/compose/compose-file/
+version: "3.1"
+# Определяем список сервисов — services
+# Эти сервисы будут частью нашего приложения
+services:
+
+  app: # Имя сервиса
+    build:
+      # Контекст для сборки образа,
+      # в данном случае, текущая директория
+      context: .
+      # Имя докерфайла из которого будет собран образ
+      dockerfile: Dockerfile
+    container_name: app
+    command: npm test
+
