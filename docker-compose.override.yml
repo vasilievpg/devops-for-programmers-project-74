@@ -23,3 +23,22 @@ services:
     volumes:
       # Текущая директория пробрасывается в директорию /app внутри контейнера
       - "./app:/app"
+
+  caddy:
+      image: caddy:latest
+      container_name: caddy
+      restart: unless-stopped
+      ports:
+        - "80:80"
+        - "443:443"
+        - "443:443/udp"
+      volumes:
+        - ./services/caddy/Caddyfile:/etc/caddy/Caddyfile
+        - caddy_data:/data
+        - caddy_config:/config
+      depends_on:
+        - app
+
+volumes:
+  caddy_data:
+  caddy_config:
