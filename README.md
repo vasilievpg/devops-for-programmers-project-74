@@ -10,9 +10,9 @@
 
 ## Requirements
 
-  - docker
-  - docker compose
-  - make
+- docker
+- docker compose
+- make
 
 ## How to use
 
@@ -22,6 +22,7 @@
 make env-prepare
 make up
 ```
+
 ### Run tests
 
 ```console
