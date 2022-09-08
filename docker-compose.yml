@@ -15,23 +15,24 @@ services:
       # Имя докерфайла из которого будет собран образ
       dockerfile: Dockerfile.production
     depends_on: 
-      - postgres
+      - db
     container_name: app
     command: npm test
 
-  # db:
-  #   container_name: db
-  #   image: postgres:latest
-  #   restart: always
-  #   environment:
-  #     POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
-  #     POSTGRES_USER: ${DATABASE_USERNAME}
-  #   volumes:
-  #     - ./pgdata:/var/lib/postgresql/data
-
-  postgres:
-    image: postgres:13-alpine
+  db:
+    container_name: db
+    image: postgres:latest
+    restart: always
     environment:
+      # POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+      # POSTGRES_USER: ${DATABASE_USERNAME}
       POSTGRES_HOST_AUTH_METHOD: trust
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - ./pgdata:/var/lib/postgresql/data
+
+  # postgres:
+  #   image: postgres:13-alpine
+  #   environment:
+  #     POSTGRES_HOST_AUTH_METHOD: trust
+  #   volumes:
+  #     - pgdata:/var/lib/postgresql/data
