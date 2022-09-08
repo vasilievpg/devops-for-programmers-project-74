@@ -23,6 +23,8 @@ services:
     volumes:
       # Текущая директория пробрасывается в директорию /app внутри контейнера
       - "./app:/app"
+    depends_on: 
+      - db
 
   caddy:
       image: caddy:latest
