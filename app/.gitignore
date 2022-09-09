@@ -57,8 +57,7 @@ profile*
 *clinic*
 *flamegraph*
 
-.env
+
 *.sqlite
 tmp/
 
-.env
