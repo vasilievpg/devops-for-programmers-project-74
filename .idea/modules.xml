@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../Backup/.idea/Backup.iml" filepath="$PROJECT_DIR$/../Backup/.idea/Backup.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../Docker_basics/.idea/Docker_basics.iml" filepath="$PROJECT_DIR$/../../Docker_basics/.idea/Docker_basics.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/devops-for-programmers-project-74.iml" filepath="$PROJECT_DIR$/.idea/devops-for-programmers-project-74.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../devops-for-programmers-project-lvl1-example/.idea/devops-for-programmers-project-lvl1-example.iml" filepath="$PROJECT_DIR$/../../devops-for-programmers-project-lvl1-example/.idea/devops-for-programmers-project-lvl1-example.iml" />
     </modules>
   </component>
 </project>
