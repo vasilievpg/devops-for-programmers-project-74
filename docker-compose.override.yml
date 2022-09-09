@@ -16,7 +16,8 @@ services:
     container_name: app
     ports:
       - 8080:8080
-    command: npm run dev
+#    command: npm run dev
+    command: bash -c 'sleep 3 && npm start'
     # Перечисляем тома (volumes)
     # Они будут подключены к файловой системе сервиса
     # Например, всё что находится в . мы увидим в директории /app

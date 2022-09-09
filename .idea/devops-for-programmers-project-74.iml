@@ -5,6 +5,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Docker_basics" />
+    <orderEntry type="module" module-name="Backup" />
+    <orderEntry type="module" module-name="devops-for-programmers-project-lvl1-example" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_FOLDERS">
