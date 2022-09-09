@@ -1,2 +1,8 @@
-#.env
+.env
+
+# webstorm
 .idea
+
+# vscode
+.vscode
+*code-workspace
