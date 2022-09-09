@@ -1,26 +1,18 @@
-version: "2"
+# Версия схемы, которую мы используем.
+# Зависит от установленной версии docker
+# https://docs.docker.com/compose/compose-file/
+version: "3.1"
+# Определяем список сервисов — services
+# Эти сервисы будут частью нашего приложения
 services:
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile.production
-    image: vasilevpg/devops-for-programmers-project-74
-    environment:
-      DATABASE_USERNAME: ${DATABASE_USERNAME}
-      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
-      DATABASE_NAME: ${DATABASE_NAME}
-      DATABASE_HOST: ${DATABASE_HOST}
-    command: npm test
-    depends_on: [db]
 
-  db:
-    image: postgres
-    restart: always
-    volumes:
-        - pgdata:/var/lib/postgresql/data
-    environment:
-      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
-      POSTGRES_USER: ${DATABASE_USERNAME}
-      POSTGRES_HOST: ${DATABASE_HOST}
-volumes: 
-    pgdata:
+  app: # Имя сервиса
+    image: vasilevpg/devops-for-programmers-project-74
+    build:
+      # Контекст для сборки образа,
+      # в данном случае, текущая директория
+      context: .
+      # Имя докерфайла из которого будет собран образ
+      dockerfile: Dockerfile.production
+    container_name: app
+    command: npm test
