@@ -12,7 +12,6 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-      # checkout – клонирует репозиторий
       - uses: actions/checkout@v2
 
       - name: Set up Docker Buildx
