@@ -19,7 +19,7 @@ jobs:
         uses: docker/setup-buildx-action@v2
 
       - name: Prepare Env
-        run: make prepare-env
+        run: make env-prepare
 
       - name: Run tests
         working-directory: .
