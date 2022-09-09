@@ -26,5 +26,6 @@ make up
 ### Run tests
 
 ```console
+make env-prepare
 make ci
 ```
